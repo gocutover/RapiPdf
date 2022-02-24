@@ -26,13 +26,16 @@
   <!--
   <rapi-pdf id='rapipdf' spec-url="./examples/specs/test.json" include-info="false" include-security="false" include-toc="false"> </rapi-pdf>
   -->
-  <rapi-pdf id='rapipdf' spec-url="./specs/petstore.json" pdf-schema-style="table"> </rapi-pdf>
-  <rapi-pdf id='rapipdf' spec-url="./specs/petstore.json" pdf-schema-style="object"> </rapi-pdf>
-  <rapi-pdf id='rapipdf' spec-url="./specs/bitbucket.json"> </rapi-pdf>
-  <rapi-pdf id='rapipdf' spec-url="./specs/data-types.yaml"> </rapi-pdf>
-  <rapi-pdf id='rapipdf' spec-url="./specs/data-types.yaml" include-example="true", button-label="WITH EXAMPLE"> </rapi-pdf>
-  <rapi-pdf id='rapipdf' spec-url="./specs/data-types.yaml" hide-input="true"> </rapi-pdf>
-  
+  <rapi-pdf
+    id='rapipdf'
+    spec-url="http://localhost:9292/docs/{version}.json"
+    include-example="false"
+    include-security="false"
+    pdf-title="API Endpoint Reference"
+    pdf-schema-style="object"
+    pdf-primary-color="#2A55C3"
+    pdf-alternate-color="#9470c4"
+  > </rapi-pdf>
 
   <button onclick="changeSpec()">Change Spec</button>
   <script type="text/javascript">
