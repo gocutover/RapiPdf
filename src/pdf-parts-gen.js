@@ -137,7 +137,7 @@ function getParameterTableDef(parameters, paramType, localize, includeExample = 
     }
   } else {
     parameters.map((param) => {
-      const paramSchema = getTypeInfo(param.schema);
+      const paramSchema = getTypeInfo(param.schema || param.content['application/json'].schema);
       tableContent.push([
         {
           text: [

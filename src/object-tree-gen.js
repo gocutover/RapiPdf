@@ -43,7 +43,7 @@ export function getTypeInfo(schema) {
   }
 
   if (schema.type === 'array' || schema.items) {
-    const arraySchema = schema.items;
+    const arraySchema = schema.items || {};
     info.arrayType = `${schema.type} of ${arraySchema.type}`;
     info.default = arraySchema.default === 0 ? '0 ' : (arraySchema.default ? arraySchema.default : '');
     if (arraySchema.enum) {
